@@ -1,0 +1,6 @@
+gensim
+requests
+numpy
+matplotlib
+scikit-learn
+seaborn

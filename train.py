@@ -20,7 +20,7 @@ BOOKS_URLS = [
     "https://www.gutenberg.org/files/11/11-0.txt",        # Alice in Wonderland
     "https://www.gutenberg.org/files/2012/2012-0.txt",    # Origin of Species (Science)
     "https://www.gutenberg.org/cache/epub/1497/pg1497.txt", # The Republic (Philosophy)
-    
+
     # WikiText-2 (High Quality Wikipedia subset - ~2 million words)
     "https://raw.githubusercontent.com/pytorch/examples/master/word_language_model/data/wikitext-2/train.txt"
 ]
@@ -28,8 +28,8 @@ BOOKS_URLS = [
 DATA_FILE = "datasets/corpus_simple.txt"
 MODEL_PATH = "models/word2vec_simple.model"
 
-Path(DATA_FILE).parent.mkdir(parents=True)
-Path(MODEL_PATH).parent.mkdir(parents=True)
+Path(DATA_FILE).parent.mkdir(parents=True, exist_ok=False)
+Path(MODEL_PATH).parent.mkdir(parents=True, exist_ok=False)
 
 # ==========================================
 # 2. HYPERPARAMETERS (The "Knobs" of the Brain)

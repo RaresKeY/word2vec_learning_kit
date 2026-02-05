@@ -4,6 +4,7 @@ import multiprocessing
 from gensim.models import Word2Vec
 from gensim.models.callbacks import CallbackAny2Vec
 import logging
+from pathlib import Path
 
 # Setup Logging
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
@@ -26,6 +27,9 @@ BOOKS_URLS = [
 
 DATA_FILE = "datasets/corpus_simple.txt"
 MODEL_PATH = "models/word2vec_simple.model"
+
+Path(DATA_FILE).parent.mkdir(parents=True)
+Path(MODEL_PATH).parent.mkdir(parents=True)
 
 # ==========================================
 # 2. HYPERPARAMETERS (The "Knobs" of the Brain)
